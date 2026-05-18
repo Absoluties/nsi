@@ -1,0 +1,78 @@
+body {
+    background: url(background.jpg) center center no-repeat;
+    ;
+    background-attachment: fixed;
+    background-size: cover;
+
+    color: white;
+
+    height: 100%;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+}
+
+#question_div {
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 50px;
+    color: black;
+    border: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons_div {
+    position: absolute;
+    text-align: center;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 200px;
+}
+
+.answer_button {
+    width: 40%;
+    height: 40%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#results_house {
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+}
+
+#results_table {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+#restart_button {
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 10%;
+}

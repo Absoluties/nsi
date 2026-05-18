@@ -1,0 +1,5 @@
+def k_neighbors(profile, k):
+    with open("Characters.csv", mode='r', encoding='utf_8') as characters_file: houses = {line.split(';', 2)[-2]: line.split(';', 5)[-2] for line in characters_file.readlines()[1:]}
+    with open("Caracteristiques_des_persos.csv", mode='r', encoding='utf_8') as characteristics_file:
+        characteristics = characteristics_file.readline()[:-1].split(';')[1:]; neighbors = [test[1] for test in [({characteristics[index]: int(value) for index, value in enumerate(line[:-1].split(';')[1:])}, houses[line[:line.index(';')]]) for line in characteristics_file] if sum([(value-test[0][trait]) ** 2 for trait, value in profile.items()]) ** 0.5 < k]; return max(set(neighbors), key=neighbors.count)
+print([k_neighbors(profile, 5) for profile in [{'Courage': 9, 'Ambition': 2, 'Intelligence': 8, 'Good': 9}, {'Courage': 6, 'Ambition': 7, 'Intelligence': 9, 'Good': 7}, {'Courage': 3, 'Ambition': 8, 'Intelligence': 6, 'Good': 3}, {'Courage': 2, 'Ambition': 3, 'Intelligence': 7, 'Good': 8}, {'Courage': 3, 'Ambition': 4, 'Intelligence': 8, 'Good': 8}]])
